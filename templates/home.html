@@ -18,7 +18,7 @@
 
 
     <body class="bg-slate-50" style="font-family: 'Euclid Circular A', sans-serif;">
-        <header class="text-gray-600 body-font">
+        <!-- <header class="text-gray-600 body-font">
             <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <span class="ml-3 text-xl">OCR <i class="fi fi-rr-text"></i></span>
@@ -40,7 +40,7 @@
             </div>
 
 
-        </header>
+        </header> -->
         <!-- error popup modal -->
         {% if messages %}
         {% for msg in messages %}
@@ -82,14 +82,14 @@
                             {% csrf_token %}
                             <input name="imagefile" re accept="image/*" type="file" id="formFile"
                                 style="display: none;">
-                            <button class="custom-btn shadow-md " disabled>
+                            <!-- <button class="custom-btn shadow-md " disabled>
                                 <select name="language" id="languages" class="bg-transparent">
-                                    <!-- <option value="eng" selected>English</option> -->
+                                    <option value="eng" selected>English</option>
                                     <option value="ara" selected>Arabic</option>
-                                    <!-- <option value="nep">Nepali</option>
-                                    <option value="hin">Hindi</option> -->
+                                    <option value="nep">Nepali</option> 
+                                    <option value="hin">Hindi</option>
                                 </select>
-                            </button>
+                            </button> -->
                             <button type="submit" class="custom-btn shadow-md bg-white">Scan <i
                                     class="fi fi-rr-search"></i></button>
                         </form>

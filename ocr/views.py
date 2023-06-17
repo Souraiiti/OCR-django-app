@@ -8,7 +8,7 @@ from PIL import Image
 
 # you have to install tesseract module too from here - https://github.com/UB-Mannheim/tesseract/wiki
 pytesseract.pytesseract.tesseract_cmd = (
-    r'/usr/bin/tesseract'  # Path to tesseract.exe
+    r'/usr/bin/tesseract'  # Path to tesseract.exej
 )
 
 
@@ -24,9 +24,9 @@ def homepage(request):
                 request, messages.ERROR, "No image selected or uploaded"
             )
             return render(request, "home.html")
-        lang = request.POST["language"]
+        # lang = request.POST["language"]
         img = np.array(Image.open(image))
-        text = pytesseract.image_to_string(img, lang=lang)
+        text = pytesseract.image_to_string(img, lang = "eng")
         # return text to html
         return render(request, "home.html", {"ocr": text, "image": image_base64})
     #

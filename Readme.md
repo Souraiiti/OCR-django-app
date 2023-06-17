@@ -1,7 +1,11 @@
+# Project Set
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
 # Text Extractor/ OCR in Django
-
-
 A django webapp for scanning texts from images, simply you have to upload image and it will provide you with texts found
 
 
@@ -14,6 +18,7 @@ Currently i have included commonly used language list only, feature request for 
 
 
 Note: You have to install [tesseract module](https://github.com/UB-Mannheim/tesseract/wiki) too
+
 ## Frameworks/lib used
 - Tailwindcss
 - django
