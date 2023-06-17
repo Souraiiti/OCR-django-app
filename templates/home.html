@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description"
-            content="Extract or scan text from images in multiple languages- English Hindi Nepali etc. Quickly Get Text from Image">
+            content="Extract or scan text from images in Arabic languages. Quickly Get Text from Image">
         <title>Text Extractor Scan text from Image| OCR</title>
         <link rel="stylesheet" href="/static/style.css">
         <link href="http://fonts.cdnfonts.com/css/euclid-circular-a?styles=100037,100034,100036,100039,100031"
@@ -102,11 +102,14 @@
                 <div class="flex justify-center ease-out m-5 rounded-2xl duration-300 h-96">
                     <img class="justify-center rounded-2xl hover:scale-105 stroke-white stroke-2 duration-500"
                         src="data:image/png;base64, {{ image }}">
-                </div>
-                {% endif %}
+                <!-- </div>class="flex justify-center ease-out m-5 rounded-2xl duration-300 h-96"> -->
                 <!-- Uploaded image will be shown -->
 
                 <!-- OCR text will be shown -->
+                <!-- </div>class="flex justify-center ease-out m-5 rounded-2xl duration-300 h-96"> -->
+                <img class="justify-center rounded-2xl hover:scale-105 stroke-white stroke-2 duration-500"
+                    src="data:image/png;base64, {{ image }}">
+                {% endif %}
                 {% if ocr %}
                 <div class=" ease-out bg-white text-slate-800 rounded-2xl hover:shadow-lg p-6 mt-3 duration-300 w-auto">
                     <p id="ocrtext" class="text-lg mt-2  mb-8 text-center ">{{ ocr }}</p>

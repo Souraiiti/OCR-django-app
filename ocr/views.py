@@ -26,6 +26,7 @@ def homepage(request):
             return render(request, "home.html")
         # lang = request.POST["language"]
         img = np.array(Image.open(image))
+        pred_img=img.copy()
         text = pytesseract.image_to_string(img, lang = "eng")
         # return text to html
         return render(request, "home.html", {"ocr": text, "image": image_base64})
